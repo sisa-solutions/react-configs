@@ -1,0 +1,17 @@
+{
+  "name": "@sisa/biome-configs",
+  "version": "0.0.1",
+  "type": "module",
+  "exports": {
+    "./base": "./base.json",
+    "./react": "./react.json"
+  },
+  "scripts": {
+    "format": "biome format --write",
+    "lint": "biome lint --write",
+    "check": "biome check --write"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4"
+  }
+}

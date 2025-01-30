@@ -83,6 +83,12 @@ web_modules/
 .cache
 .parcel-cache
 
+# Turbo
+.turbo
+
+# Vercel
+.vercel
+
 # Next.js build output
 .next
 out
