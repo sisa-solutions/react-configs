@@ -1,0 +1,19 @@
+{
+  "name": "@sisa/react-configs",
+  "packageManager": "yarn@4.6.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "format": "turbo format",
+    "lint": "turbo lint",
+    "check": "turbo check",
+    "dev": "turbo dev",
+    "build": "turbo build"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@sisa/biome-configs": "workspace:*",
+    "turbo": "2.3.4"
+  }
+}

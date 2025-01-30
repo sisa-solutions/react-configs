@@ -1,0 +1,3 @@
+{
+  "extends": ["@sisa/biome-configs/base"]
+}
