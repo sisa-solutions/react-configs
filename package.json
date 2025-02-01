@@ -1,9 +1,6 @@
 {
   "name": "@sisa/react-configs",
-  "packageManager": "yarn@4.6.0",
-  "workspaces": [
-    "packages/*"
-  ],
+  "packageManager": "pnpm@10.0.0",
   "scripts": {
     "format": "turbo format",
     "lint": "turbo lint",
