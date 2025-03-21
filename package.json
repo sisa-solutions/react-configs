@@ -2,15 +2,13 @@
   "name": "@sisa/react-configs",
   "packageManager": "pnpm@10.0.0",
   "scripts": {
-    "format": "turbo format",
-    "lint": "turbo lint",
-    "check": "turbo check",
-    "dev": "turbo dev",
-    "build": "turbo build"
+    "check": "biome check",
+    "format": "biome check --write"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.9.4",
+    "@biomejs/biome": "^1.9.4",
     "@sisa/biome-configs": "workspace:*",
-    "turbo": "2.3.4"
+    "lefthook": "^1.11.3",
+    "turbo": "^2.4.4"
   }
 }

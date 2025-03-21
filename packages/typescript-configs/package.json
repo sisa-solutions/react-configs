@@ -8,12 +8,11 @@
     "./react-library": "./react-library.json"
   },
   "scripts": {
-    "format": "biome format --write",
-    "lint": "biome lint --write",
-    "check": "biome check --write"
+    "check": "biome check ",
+    "format": "biome check --write"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.9.4",
+    "@biomejs/biome": "^1.9.4",
     "@sisa/biome-configs": "workspace:*"
   }
 }
