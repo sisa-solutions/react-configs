@@ -12,6 +12,7 @@ on:
 
 jobs:
   validate:
+    name: Validate packages
     strategy:
       matrix:
         node-version: [20]
