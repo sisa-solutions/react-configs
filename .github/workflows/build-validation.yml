@@ -1,4 +1,4 @@
-name: node build and test
+name: Build Validation
 
 on:
   push:
@@ -11,8 +11,7 @@ on:
     - 'packages/**'
 
 jobs:
-  build:
-    name: build
+  validate:
     strategy:
       matrix:
         node-version: [20]
@@ -36,5 +35,5 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Validate Build
+      - name: Validate
         run: pnpm check
