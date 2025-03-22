@@ -5,14 +5,23 @@ on:
     branches: [ main ]
     paths:
       - 'packages/**'
+
   pull_request:
     branches: [ main ]
     paths:
       - 'packages/**'
 
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Reason for running the workflow'
+        required: true
+        type: string
+        default: 'Validate packages'
+
 jobs:
   validate:
-    name: Validate packages
+    name: Validate packages (${{ github.event.inputs.reason}})
     strategy:
       matrix:
         node-version: [22]
