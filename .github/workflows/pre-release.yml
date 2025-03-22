@@ -1,18 +1,14 @@
-name: Build Validation
+name: Pre-Release
 
 on:
   push:
     branches: [ main ]
-    paths:
-      - 'packages/**'
-  pull_request:
-    branches: [ main ]
-    paths:
-      - 'packages/**'
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
-  validate:
-    name: Validate packages
+  release:
+    name: Release packages
     strategy:
       matrix:
         node-version: [22]
@@ -36,5 +32,17 @@ jobs:
       - name: Install dependencies
         run: pnpm install --prod --frozen-lockfile
 
-      - name: Validate
-        run: pnpm check
+      - name: Create Release Pull Request or Publish to npm registry
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          publish: pnpm pre-release
+          commit: 'ci: version packages'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Push git tag after publish
+        if: steps.changesets.outputs.published == 'true'
+        run: git push --follow-tags
+
