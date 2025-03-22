@@ -16,12 +16,15 @@ jobs:
     strategy:
       matrix:
         node-version: [22]
-    runs-on: ${{ matrix.node-version }}
+    
+    runs-on: ubuntu-22.04
+    
     permissions:
       contents: write       # to create release (changesets/action)
       issues: write         # to post issue comments (changesets/action)
       pull-requests: write  # to create pull request (changesets/action)
       packages: write       # to publish packages (changesets/action)
+    
     timeout-minutes: 5
     steps:
       - name: Checkout repository
