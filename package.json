@@ -2,8 +2,12 @@
   "name": "@sisa/react-configs",
   "packageManager": "pnpm@10.0.0",
   "scripts": {
-    "pre-release": "pnpm changeset publish",
-    "release": "pnpm publish -r",
+    "release:version": "changeset version -r",
+    "release:publish": "changeset publish -r",
+    "pre-release:version": "changeset version --snapshot next",
+    "pre-release:publish": "changeset publish --tag next",
+    "pre-release:enter": "changeset pre enter next",
+    "pre-release:exit": "changeset pre exit next",
     "check": "biome check",
     "format": "biome check --write"
   },

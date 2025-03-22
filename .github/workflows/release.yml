@@ -1,9 +1,9 @@
-name: Pre-Release
+name: Release
 
 on:
   push:
     branches:
-      - next
+      - main
     paths:
       - 'packages/**'
       - '.changeset/**'
@@ -46,8 +46,8 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          version: pnpm pre-release:version
-          publish: pnpm pre-release:publish
+          version: pnpm release:version
+          publish: pnpm release:publish
           commit: 'ci(changesets): version packages'
           createGithubReleases: true
         env:
