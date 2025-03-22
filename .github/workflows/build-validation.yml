@@ -4,19 +4,30 @@ on:
   push:
     branches: [ main ]
     paths:
-    - 'packages/**'
+      - 'packages/**'
+
   pull_request:
     branches: [ main ]
     paths:
-    - 'packages/**'
+      - 'packages/**'
+
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Reason for running the workflow'
+        required: true
+        type: string
+        default: 'Validate packages'
 
 jobs:
   validate:
-    name: Validate packages
+    name: Validate packages (${{ github.event.inputs.reason}})
     strategy:
       matrix:
-        node-version: [20]
-    runs-on: ${{ matrix.node-version }}
+        node-version: [22]
+
+    runs-on: ubuntu-22.04
+    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -34,7 +45,7 @@ jobs:
           cache-dependency-path: ./pnpm-lock.yaml
       
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --prod --frozen-lockfile
 
       - name: Validate
         run: pnpm check

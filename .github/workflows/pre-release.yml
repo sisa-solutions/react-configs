@@ -1,0 +1,63 @@
+name: Pre-Release
+
+on:
+  push:
+    branches:
+      - next
+    paths:
+      - 'packages/**'
+      - '.changeset/**'
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  release:
+    name: Release packages
+    strategy:
+      matrix:
+        node-version: [22]
+
+    runs-on: ubuntu-22.04
+    
+    permissions:
+      contents: write       # to create release (changesets/action)
+      issues: write         # to post issue comments (changesets/action)
+      pull-requests: write  # to create pull request (changesets/action)
+      packages: write       # to publish packages (changesets/action)
+    
+    timeout-minutes: 5
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+  
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+          cache-dependency-path: ./pnpm-lock.yaml
+      
+      - name: Install dependencies
+        run: pnpm install --prod --frozen-lockfile
+
+      - name: Create Release Pull Request or Publish to npm registry
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          version: pnpm pre-release:version
+          publish: pnpm pre-release:publish
+          commit: 'ci(changesets): version packages'
+          createGithubReleases: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Push git tag after publish
+        if: steps.changesets.outputs.published == 'true'
+        run: git push --follow-tags
+
