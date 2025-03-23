@@ -1,0 +1,35 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "autoApprove": false,
+  "automerge": false,
+  "extends": ["config:js-lib", "schedule:weekly"],
+  "rebaseWhen": "conflicted",
+  "labels": ["dependencies"],
+  "timezone": "UTC",
+  "rangeStrategy": "bump",
+  "postUpdateOptions": ["pnpmDedupe"],
+  "prConcurrentLimit": 10,
+  "prHourlyLimit": 0,
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": "0 0 * * 0"
+  },
+  "packageRules": [
+    {
+      "matchDepTypes": ["peerDependencies"],
+      "rangeStrategy": "widen"
+    },
+    {
+      "matchUpdateTypes": ["minor", "patch", "digest"],
+      "automergeType": "branch"
+    },
+    {
+      "groupName": "changesets",
+      "matchPackagePatterns": ["@changesets*"]
+    },
+    {
+      "groupName": "commitlint",
+      "matchPackagePatterns": ["commitlint*"]
+    }
+  ]
+}
