@@ -32,8 +32,6 @@ jobs:
 
       - name: Install pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: 10
   
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
@@ -60,4 +58,3 @@ jobs:
       - name: Push git tag after publish
         if: steps.changesets.outputs.published == 'true'
         run: git push --follow-tags
-
