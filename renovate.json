@@ -12,7 +12,9 @@
   "prHourlyLimit": 0,
   "lockFileMaintenance": {
     "enabled": true,
-    "schedule": "0 0 * * 0"
+    "autoApprove": false,
+    "automerge": false,
+    "extends": ["schedule:weekly"]
   },
   "packageRules": [
     {
