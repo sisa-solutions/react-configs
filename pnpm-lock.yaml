@@ -9,7 +9,7 @@ importers:
   .:
     devDependencies:
       '@biomejs/biome':
-        specifier: ^1.9.4
+        specifier: 1.9.4
         version: 1.9.4
       '@changesets/changelog-github':
         specifier: ^0.5.1
@@ -24,28 +24,28 @@ importers:
         specifier: ^19.8.0
         version: 19.8.0
       '@sisa/biome-configs':
-        specifier: ^0.0.2
+        specifier: 0.0.2
         version: 0.0.2
       lefthook:
-        specifier: ^1.11.3
+        specifier: 1.11.3
         version: 1.11.3
       turbo:
-        specifier: ^2.4.4
+        specifier: 2.4.4
         version: 2.4.4
 
   packages/biome-configs:
     devDependencies:
       '@biomejs/biome':
-        specifier: ^1.9.4
+        specifier: 1.9.4
         version: 1.9.4
 
   packages/typescript-configs:
     devDependencies:
       '@biomejs/biome':
-        specifier: ^1.9.4
+        specifier: 1.9.4
         version: 1.9.4
       '@sisa/biome-configs':
-        specifier: ^0.0.2
+        specifier: 0.0.2
         version: 0.0.2
 
 packages:
