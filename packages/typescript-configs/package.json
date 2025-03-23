@@ -13,6 +13,6 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "@sisa/biome-configs": "workspace:*"
+    "@sisa/biome-configs": "^0.0.2"
   }
 }
