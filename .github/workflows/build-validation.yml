@@ -17,7 +17,7 @@ on:
 
 jobs:
   validate:
-    name: Validate packages (${{ github.event.inputs.reason}})
+    name: Validate commit messages, code format, and lint
     strategy:
       matrix:
         node-version: [22]
