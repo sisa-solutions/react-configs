@@ -20,7 +20,7 @@ jobs:
       matrix:
         language: [ 'typescript' ]
 
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     
     permissions:
       # required for all workflows
