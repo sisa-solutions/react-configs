@@ -39,7 +39,7 @@ jobs:
           cache-dependency-path: ./pnpm-lock.yaml
       
       - name: Install dependencies
-        run: pnpm install --prod --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Validate current commit (last commit) with commitlint
         if: github.event_name == 'push'
