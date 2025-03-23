@@ -2,7 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "autoApprove": false,
   "automerge": false,
-  "extends": ["config:js-lib", "schedule:weekly"],
+  "extends": ["config:js-lib", ":preserveSemverRanges", "schedule:weekly"],
   "rebaseWhen": "conflicted",
   "labels": ["dependencies"],
   "timezone": "UTC",
