@@ -17,7 +17,7 @@
     "@changesets/cli": "^2.29.4",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
-    "@sisa/biome-configs": "^0.0.2",
+    "@sisa/biome-configs": "^0.0.5",
     "lefthook": "^1.11.12",
     "turbo": "^2.5.3"
   }

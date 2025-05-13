@@ -1,6 +1,6 @@
 {
   "name": "@sisa/typescript-configs",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "type": "module",
   "exports": {
     "./base": "./base.json",
@@ -13,6 +13,6 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "@sisa/biome-configs": "^0.0.3"
+    "@sisa/biome-configs": "^0.0.5"
   }
 }
