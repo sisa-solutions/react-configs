@@ -1,6 +1,6 @@
 {
   "name": "@sisa/react-configs",
-  "packageManager": "pnpm@10.6.5",
+  "packageManager": "pnpm@10.10.0",
   "scripts": {
     "release:version": "changeset version -r",
     "release:publish": "changeset publish -r",

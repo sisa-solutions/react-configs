@@ -45,8 +45,8 @@ importers:
         specifier: ^1.9.4
         version: 1.9.4
       '@sisa/biome-configs':
-        specifier: ^0.0.2
-        version: 0.0.2
+        specifier: ^0.0.3
+        version: 0.0.3
 
 packages:
 
@@ -265,6 +265,9 @@ packages:
 
   '@sisa/biome-configs@0.0.2':
     resolution: {integrity: sha512-Iannk0Q8EO9mUUQr3USFC9LKybDb4xbpKqlr4qkI7qkCvr9M1IoRFVecrCTkdJd2xYLmDmt+GBMSLvMMRj5PCw==}
+
+  '@sisa/biome-configs@0.0.3':
+    resolution: {integrity: sha512-DAGDvEHRyXobfZy43QXuETD3A5UWid520FBFAAC7HfucS+ekHS3YydIFMaf2AaaLQ9HVqFXOs7/ltpkL5AqWtQ==}
 
   '@types/conventional-commits-parser@5.0.1':
     resolution: {integrity: sha512-7uz5EHdzz2TqoMfV7ee61Egf5y6NkcO4FB/1iCCQnbeiI1F3xzv3vK5dBCXUCLQgGYS+mUeigK1iKQzvED+QnQ==}
@@ -1303,6 +1306,8 @@ snapshots:
       fastq: 1.19.1
 
   '@sisa/biome-configs@0.0.2': {}
+
+  '@sisa/biome-configs@0.0.3': {}
 
   '@types/conventional-commits-parser@5.0.1':
     dependencies:
