@@ -1,6 +1,6 @@
 {
   "name": "@sisa/typescript-configs",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "type": "module",
   "exports": {
     "./base": "./base.json",
