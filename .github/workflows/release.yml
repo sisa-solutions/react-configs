@@ -7,7 +7,8 @@ on:
     paths:
       - 'packages/**'
       - '.changeset/**'
-
+  workflow_call:
+    
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
