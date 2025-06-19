@@ -1,6 +1,6 @@
 {
   "name": "@sisa/biome-configs",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "type": "module",
   "exports": {
     "./base": "./base.json",
@@ -11,6 +11,6 @@
     "format": "biome check --write"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.4"
+    "@biomejs/biome": "^2.0.0"
   }
 }
