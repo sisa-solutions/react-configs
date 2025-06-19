@@ -12,7 +12,10 @@
   "assist": {
     "enabled": true,
     "actions": {
-      "recommended": true
+      "source": {
+        "organizeImports": "off",
+        "useSortedProperties": "on"
+      }
     }
   },
   "formatter": {
