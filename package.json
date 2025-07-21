@@ -19,6 +19,6 @@
     "@commitlint/config-conventional": "^19.8.1",
     "@sisa/biome-configs": "^0.0.8",
     "lefthook": "^1.11.14",
-    "turbo": "^2.5.4"
+    "turbo": "^2.5.5"
   }
 }
