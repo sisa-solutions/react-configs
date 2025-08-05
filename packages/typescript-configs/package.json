@@ -1,11 +1,12 @@
 {
   "name": "@sisa/typescript-configs",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "type": "module",
   "exports": {
     "./base": "./base.json",
     "./react": "./react.json",
-    "./react-library": "./react-library.json"
+    "./react-library": "./react-library.json",
+    "./react-native-library": "./react-native-library.json"
   },
   "scripts": {
     "check": "biome check ",
@@ -13,6 +14,6 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.1.3",
-    "@sisa/biome-configs": "^0.0.8"
+    "@sisa/biome-configs": "^0.0.9"
   }
 }

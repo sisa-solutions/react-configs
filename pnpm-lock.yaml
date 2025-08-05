@@ -24,8 +24,8 @@ importers:
         specifier: ^19.8.1
         version: 19.8.1
       '@sisa/biome-configs':
-        specifier: ^0.0.8
-        version: 0.0.8
+        specifier: ^0.0.9
+        version: 0.0.9
       lefthook:
         specifier: ^1.12.2
         version: 1.12.2
@@ -45,8 +45,8 @@ importers:
         specifier: ^2.1.3
         version: 2.1.3
       '@sisa/biome-configs':
-        specifier: ^0.0.8
-        version: 0.0.8
+        specifier: ^0.0.9
+        version: 0.0.9
 
 packages:
 
@@ -263,8 +263,8 @@ packages:
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
 
-  '@sisa/biome-configs@0.0.8':
-    resolution: {integrity: sha512-K1fdtono54sRwUHfotm5DVHk/lhxYLTaUJI582HWZOl1ldzb0X+EgE4frqthAZnzfYhvvUaSf7pUFLOl7EzCjA==}
+  '@sisa/biome-configs@0.0.9':
+    resolution: {integrity: sha512-tRm2e3nNBHUoPA9W93UuWWp27ddJqXOEqED9F+mlqGJV5nJPKdvsya6iZo2oTdy9+l7Mb6oNe5AgUcx93NcrQQ==}
 
   '@types/conventional-commits-parser@5.0.1':
     resolution: {integrity: sha512-7uz5EHdzz2TqoMfV7ee61Egf5y6NkcO4FB/1iCCQnbeiI1F3xzv3vK5dBCXUCLQgGYS+mUeigK1iKQzvED+QnQ==}
@@ -1302,7 +1302,7 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.19.1
 
-  '@sisa/biome-configs@0.0.8': {}
+  '@sisa/biome-configs@0.0.9': {}
 
   '@types/conventional-commits-parser@5.0.1':
     dependencies:
